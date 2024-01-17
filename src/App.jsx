@@ -76,9 +76,10 @@ function App() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(currentPrices),
         };
+
         //Fetching des datas du fichier back-end
         const res = await fetch(
-          `http://127.0.0.1:8000/tableau?nb_appel=${iteration.current}`,
+          `https://stocks-game-backend-clothilde-roy.koyeb.app/tableau?nb_appel=${iteration.current}`,
           requestOptions
         );
         const data = await res.json();
